@@ -107,4 +107,9 @@ class Horde_Controller_Request_Mock extends Horde_Controller_Request_Http
     {
         return new Horde_Stream_String(array('string' => $this->getVars('REQUEST')));
     }
+
+    public function getHeader($name)
+    {
+        return $this->getVars('HEADER')[$name];
+    }
 }
